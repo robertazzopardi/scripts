@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Prune all merged branches except master, main and dev 
+
+git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d
